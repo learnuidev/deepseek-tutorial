@@ -31,7 +31,8 @@ const content = `最后，我建议大家每天花15分钟左右的时间进行�
 generateSimilarSentences({
   content,
   lang,
-  context: `Make this about travelling`,
+  // context: `Make this about travelling`,
+  context: `Make this about learning chinese`,
 })
   .then((content) => {
     return parseString(content);
@@ -246,5 +247,36 @@ const response3WithTemperateAndContext = [
     en: "Finally, I suggest everyone spend about 15 minutes each day organizing travel photos.",
     explanation:
       "This sentence suggests a daily habit of organizing travel photos, focusing on preserving and managing memories from trips effectively.",
+  },
+];
+
+const response3WithTemplateAndContextWithoutExplanation = [
+  {
+    hanzi: "最后，我建议大家每天花15分钟左右的时间学习中文",
+    pinyin:
+      "Zuìhòu, wǒ jiànyì dàjiā měitiān huā 15 fēnzhōng zuǒyòu de shíjiān xuéxí Zhōngwén",
+    en: "Finally, I suggest everyone spend about 15 minutes a day learning Chinese",
+  },
+  {
+    hanzi: "我建议大家每天用15分钟来练习中文",
+    pinyin: "Wǒ jiànyì dàjiā měitiān yòng 15 fēnzhōng lái liànxí Zhōngwén",
+    en: "I suggest everyone spend 15 minutes a day practicing Chinese",
+  },
+  {
+    hanzi: "每天花15分钟学习中文是个好习惯",
+    pinyin: "Měitiān huā 15 fēnzhōng xuéxí Zhōngwén shì gè hǎo xíguàn",
+    en: "Spending 15 minutes a day learning Chinese is a good habit",
+  },
+  {
+    hanzi: "我推荐大家每天用15分钟来提升中文水平",
+    pinyin:
+      "Wǒ tuījiàn dàjiā měitiān yòng 15 fēnzhōng lái tíshēng Zhōngwén shuǐpíng",
+    en: "I recommend everyone spend 15 minutes a day improving their Chinese",
+  },
+  {
+    hanzi: "每天坚持15分钟的中文学习会有很大进步",
+    pinyin:
+      "Měitiān jiānchí 15 fēnzhōng de Zhōngwén xuéxí huì yǒu hěn dà jìnbù",
+    en: "Persisting with 15 minutes of Chinese learning every day will lead to great progress",
   },
 ];
